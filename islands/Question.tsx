@@ -79,7 +79,7 @@ export default function Question() {
         <div>
             <pre class="font-bold text-xl">{variables.map(variable => `${variable.letter} = ${variable.value}\n`)}</pre>
             <p class="font-bold text-xl">{expression}</p>
-            {options.map(option => <Button class="font-bold text-2xl" onClick={() => { if (option == answer) alert("correct") }}>{option}</Button>)}
+            {options.map(option => <Button class="font-bold text-2xl" onClick={() => { if (option == answer) alert("correct"); else alert("wrong"); }}>{option}</Button>)}
         </div>
     );
 }
